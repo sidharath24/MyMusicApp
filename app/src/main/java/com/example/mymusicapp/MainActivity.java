@@ -7,54 +7,60 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView mTextMessage;
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+private BottomNavigationView mMainNav;
+private FrameLayout mMainFrame;
 
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
-                    return true;
-    /*            case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
-                    return true;
-                case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
-                    return true;
-      */
-            }
-            return false;
-        }
-    };
+private HomeFragment homeFragment;
+private FavoriteFragment favoriteFragment;
+private PlaylistFragment playlistFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        navView.setOnNavigationItemSelectedListener(navListener);
-    }
 
-        private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        mMainFrame = (FrameLayout) findViewById(R.id.main_frame);
+        mMainNav = (BottomNavigationView) findViewById(R.id.main_nav);
+
+        homeFragment = new HomeFragment();
+        favoriteFragment = new FavoriteFragment();
+        playlistFragment = new PlaylistFragment();
+
+        setFragment(homeFragment);
+
+        mMainNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                Fragment selectedFragment = null;
-
-                switch(menuItem.getItemId()){
+                switch (menuItem.getItemId()) {
                     case R.id.navigation_home:
-                        selectedFragment = new HomeFragment();
-                        break;
+                        setFragment(homeFragment);
+                        return true;
+                    case R.id.navigation_favorites:
+                        setFragment(favoriteFragment);
+                        return true;
+                    case R.id.navigation_playlists:
+                        setFragment(playlistFragment);
+                        return true;
+                    default:
+                        return false;
+
                 }
-                getSupportFragmentManager().beginTransaction().replace(R.id.nav_view, selectedFragment).commit();
-                return true;
             }
-        };
+        });
+    }
+    private void setFragment(Fragment fragment) {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.main_frame, fragment);
+        fragmentTransaction.commit();
+    }
+
+
 }
