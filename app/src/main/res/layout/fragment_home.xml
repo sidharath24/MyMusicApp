@@ -1,30 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="16dp"
-    android:layout_marginTop="16dp">
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Recently Played"
-        android:textSize="25dp"/>
+        android:text="Artists"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/colorHeading"
+        android:textSize="30dp" />
 
     <HorizontalScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="-16dp"
+        android:scrollbarSize="0px">
 
-        <ImageView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="15dp"
             android:layout_height="200dp"
-            android:layout_marginLeft="-330dp"
-            android:id="@+id/edSheeran"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/ed_sheeran"/>
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ed_sheeran" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/justin_beiber" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shawn_mendes"/>
+
+        </LinearLayout>
     </HorizontalScrollView>
 
-
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Top Songs"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:textColor="@color/colorHeading"/>
+    </LinearLayout>
 </LinearLayout>
