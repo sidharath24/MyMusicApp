@@ -42,12 +42,14 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/justin_beiber" />
+                android:src="@drawable/justin_beiber"
+                android:id="@+id/justin_bieber"/>
 
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/shawn_mendes"/>
+                android:src="@drawable/shawn_mendes"
+                android:id="@+id/shawn_mendes"/>
 
         </LinearLayout>
     </HorizontalScrollView>

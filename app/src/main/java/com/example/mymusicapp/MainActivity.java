@@ -1,5 +1,6 @@
 package com.example.mymusicapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -10,14 +11,16 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
 private BottomNavigationView mMainNav;
 private FrameLayout mMainFrame;
-
+private ImageView edSheeranSongs, shawnMendesSongs, justinBieberSongs;
 private HomeFragment homeFragment;
 private FavoriteFragment favoriteFragment;
 private PlaylistFragment playlistFragment;
