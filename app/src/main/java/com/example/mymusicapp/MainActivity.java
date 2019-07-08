@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
 private BottomNavigationView mMainNav;
 private FrameLayout mMainFrame;
-private ImageView edSheeranSongs, shawnMendesSongs, justinBieberSongs;
 private HomeFragment homeFragment;
 private FavoriteFragment favoriteFragment;
 private PlaylistFragment playlistFragment;

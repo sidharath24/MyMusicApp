@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_favorites"
+        android:icon="@drawable/ic_favorite_black_24dp"
+        android:title="@string/title_favorites" />
+
+    <item
+        android:id="@+id/navigation_previous_song"
+        android:icon="@drawable/ic_skip_previous_black_24dp"
+        android:title="@string/title_previous"/>
+
+    <item
+        android:id="@+id/navigation_play"
+        android:icon="@drawable/ic_play_arrow_black_24dp"
+        android:title="@string/title_play"/>
+
+    <item
+        android:id="@+id/navigation_next"
+        android:icon="@drawable/ic_skip_next_black_24dp"
+        android:title="@string/title_next"/>
+    <item
+        android:id="@+id/navigation_share"
+        android:icon="@drawable/ic_share_black_24dp"
+        android:title="@string/title_share"/>
+
+</menu>

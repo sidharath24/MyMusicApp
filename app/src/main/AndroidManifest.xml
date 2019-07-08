@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MendesSongs"></activity>
+        <activity android:name=".EachSong"></activity>
+        <activity android:name=".MendesSongs" />
         <activity android:name=".BieberSongs" />
         <activity android:name=".SheeranSongs" />
         <activity

@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">MyMusicApp</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Favorites</string>
+    <string name="title_favorites">Favorites</string>
     <string name="title_notifications">Playlists</string>
+    <string name="title_previous">Previous</string>
+    <string name="title_play">Play</string>
+    <string name="title_next">Next</string>
+    <string name="title_share">Share</string>
 </resources>
