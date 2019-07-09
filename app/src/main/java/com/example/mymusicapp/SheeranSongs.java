@@ -2,6 +2,7 @@ package com.example.mymusicapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -30,13 +31,19 @@ public class SheeranSongs extends AppCompatActivity {
 
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(adapter); listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Song song = songs.get(position);
 
                 mediaPlayer = MediaPlayer.create(SheeranSongs.this, song.getmAudioResourceId());
 
+                Intent intent = new Intent(getApplicationContext(), EachSong.class);
+                startActivity(intent);
+
                 mediaPlayer.start();
+
+
 
             }
         });
