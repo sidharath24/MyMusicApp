@@ -24,7 +24,7 @@ public class MendesSongs extends AppCompatActivity {
         setContentView(R.layout.activity_mendes_songs);
 
         final ArrayList<Song> songs = new ArrayList<Song>();
-        songs.add(new Song("treat You Better", "Shawn Mendes",R.raw.treat_you_better, R.drawable.treat_you_better));
+        songs.add(new Song("Treat You Better", "Shawn Mendes",R.raw.treat_you_better, R.drawable.treat_you_better));
 
 
         SongAdaptor adapter = new SongAdaptor(this, songs);

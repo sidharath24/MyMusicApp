@@ -30,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="570dp"
+            android:background="#FFFFFF"
             android:orientation="horizontal">
 
             <ImageButton
@@ -52,13 +53,16 @@
                 android:scaleY="1.4"
                 android:src="@drawable/ic_skip_previous_black_24dp" />
 
-            <ImageButton
+            <ToggleButton
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:textOff=""
+                android:textOn=""
+                android:scaleX="0.5"
+                android:scaleY="0.7"
                 android:background="#FFFFFF"
-                android:scaleX="1.7"
-                android:scaleY="1.7"
+                android:id="@+id/play_pause_toggle"
                 android:src="@drawable/ic_play_arrow_black_24dp" />
 
             <ImageButton
